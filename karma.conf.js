@@ -1,6 +1,5 @@
 var webpackConfig = require('./webpack.config.js');
 
-
 module.exports = function (config) {
   config.set({
     browsers: ['Chrome'],
@@ -9,7 +8,8 @@ module.exports = function (config) {
     files: [
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/foundation-sites/dist/foundation.min.js',
-      'app/tests/**/*.test.jsx'],
+      'app/tests/**/*.test.jsx'
+    ],
     preprocessors: {
       'app/tests/**/*.test.jsx': ['webpack', 'sourcemap']
     },
@@ -23,6 +23,5 @@ module.exports = function (config) {
     webpackServer: {
       noInfo: true
     }
-
   });
 };
